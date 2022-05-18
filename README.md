@@ -70,7 +70,7 @@ If you want to donwgrade Next.js to increase compatibility with deployment syste
 
 ##
 
-<h3 align="center" id="next">
+<h3 align="center" id="project">
   Project Setup
 </h3>
 
