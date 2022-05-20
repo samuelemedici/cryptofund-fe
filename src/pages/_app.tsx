@@ -8,7 +8,7 @@ import { store } from '../state/store/store';
 function App({ Component, pageProps }: AppProps) {
   return <>
     <Head>
-      <title>muffin</title>
+      <title>Next.js Boilerplate</title>
     </Head>
     <Provider store={store}>
       <Component {...pageProps} />
