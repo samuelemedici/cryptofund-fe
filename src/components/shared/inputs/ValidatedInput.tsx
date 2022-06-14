@@ -10,20 +10,23 @@ interface ValidatedInputProps {
     /** The id of the input - If present in the Redux slice related to inputs validation will display an error message */
     id: string;
     /** This function will return the value typed in the input field */
-    validatedInput: (value: string | number | null) => void;
+    validatedInput(value: string | number | null): void;
     /** A custom function that accepts a value and performs custom checks on it */
-    customCheck?: (value: string | number) => boolean;
+    customCheck?(value: string | number): boolean;
+
+    prePopulatedValue?: string | number;
 }
 
 const ValidatedInput = (props: ValidatedInputProps) => {
 
-    const [input, setInput] = useState("");
+    const [input, setInput] = useState<string | number>("");
     const [inputIsValid, setInputIsValid] = useState(true);
     const [inputIdHasErrors, setInputIdHasErrors] = useState(false);
     const { idList } = useAppSelector((state) => state.validatedInput);
 
     useEffect(() => {
         setInputIdHasErrors(idList.includes(props.id));
+        if (props.prePopulatedValue) setInput(props.prePopulatedValue)
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -36,7 +39,7 @@ const ValidatedInput = (props: ValidatedInputProps) => {
     }, [input]);
 
     const borderColor = () => {
-        return inputIsValid || inputIdHasErrors ? "border-b-black" : "border-b-red";
+        return inputIsValid || inputIdHasErrors ? "border-b-divider-light" : "border-b-state-red";
     }
 
     const message = () => {
@@ -44,20 +47,22 @@ const ValidatedInput = (props: ValidatedInputProps) => {
     }
 
     const messageColor = (): string => {
-        return inputIsValid ? 'text-red' : 'text-green';
+        return inputIsValid ? 'text-state-green' : 'text-state-red';
     }
 
     return (
-        <div className="w-1/4 flex flex-col relative">
-            {input !== "" && <span className="absolute -top-2 text-xs text-black">{props.placeholder}</span>}
+        <div className="w-1/2 relative mr-3 h-min">
+            {input !== "" && <span className="absolute -top-2 text-xs text-greyscale-grey-mid">{props.placeholder}</span>}
             <input
                 type={props.type}
                 onChange={(e) => { setInput(e.target.value) }}
-                className={`w-full appearance-none outline-none ${borderColor()} border-b-solid border-b-2 text-xl py-2`}
+                className={`w-full appearance-none outline-none ${borderColor()} border-b-solid border-b-2 text-lg pt-4 pb-1`}
                 placeholder={props.placeholder}
                 id={props.id}
+                autoComplete="off"
+                value={input}
             />
-            <span className={`absolute -bottom-4 text-xs ${messageColor()}`}>{message()}</span>
+            <span className={`absolute -bottom-4 left-0 text-xs ${messageColor()}`}>{message()}</span>
         </div>
     );
 };
