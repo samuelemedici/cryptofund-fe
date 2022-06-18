@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
 import localStorage from "localstorage-slim";
 
+import { ErrorReducers } from "../slices/errors";
 import testReducers from "../slices/testSlice";
-import validatedInputReducers from "../slices/validatedInputSlice";
 
 const STATE_PERSISTANCE = "redux_store";
 
@@ -22,7 +22,7 @@ export const store = configureStore({
   },
   reducer: {
     test: testReducers,
-    validatedInput: validatedInputReducers,
+    errors: ErrorReducers,
   },
 });
 
