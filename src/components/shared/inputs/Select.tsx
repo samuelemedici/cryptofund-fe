@@ -24,7 +24,7 @@ const Select = (props: SelectProps) => {
     }, [])
 
     return (
-        <div className="w-1/2 mr-3 relative h-min">
+        <div className="w-full mr-3 relative h-min">
             {(value && value !== "") && <span className="absolute -top-2 text-xs text-greyscale-grey-mid">{props.placeholder}</span>}
             <select
                 onChange={(e) => { setValue(e.target.value) }}

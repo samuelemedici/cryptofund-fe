@@ -36,7 +36,7 @@ const PasswordInput = (props: PasswordProps) => {
     }
 
     return (
-        <div className="w-1/2 flex flex-col relative">
+        <div className="w-full flex flex-col relative">
             {password !== "" && <span className="absolute -top-2 text-xs text-greyscale-grey-mid">{props.placeholder}</span>}
             <input
                 type={`${displayPassword ? 'text' : 'password'}`}

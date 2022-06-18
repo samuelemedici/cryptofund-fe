@@ -24,7 +24,7 @@ const Input = (props: InputProps) => {
     }, [value])
 
     return (
-        <div className="w-1/2 mr-3 relative">
+        <div className="w-full mr-3 relative">
             {(value && value !== "") && <span className="absolute -top-2 text-xs text-greyscale-grey-mid">{props.placeholder}</span>}
             <input
                 type={`${props.type}`}

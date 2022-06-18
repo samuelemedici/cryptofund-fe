@@ -51,7 +51,7 @@ const ValidatedInput = (props: ValidatedInputProps) => {
     }
 
     return (
-        <div className="w-1/2 relative mr-3 h-min">
+        <div className="w-full relative mr-3 h-min">
             {input !== "" && <span className="absolute -top-2 text-xs text-greyscale-grey-mid">{props.placeholder}</span>}
             <input
                 type={props.type}
