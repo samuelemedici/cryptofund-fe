@@ -1,0 +1,442 @@
+[
+    {
+      "nome": "AGRIGENTO",
+      "regione": "SICILIA"
+    },
+    {
+      "nome": "ALESSANDRIA",
+      "regione": "PIEMONTE"
+    },
+    {
+      "nome": "ANCONA",
+      "regione": "MARCHE"
+    },
+    {
+      "nome": "AREZZO",
+      "regione": "TOSCANA"
+    },
+    {
+      "nome": "ASCOLI PICENO",
+      "regione": "MARCHE"
+    },
+    {
+      "nome": "ASTI",
+      "regione": "PIEMONTE"
+    },
+    {
+      "nome": "AVELLINO",
+      "regione": "CAMPANIA"
+    },
+    {
+      "nome": "BARI",
+      "regione": "PUGLIA"
+    },
+    {
+      "nome": "BARLETTA-ANDRIA-TRANI",
+      "regione": "PUGLIA"
+    },
+    {
+      "nome": "BELLUNO",
+      "regione": "VENETO"
+    },
+    {
+      "nome": "BENEVENTO",
+      "regione": "CAMPANIA"
+    },
+    {
+      "nome": "BERGAMO",
+      "regione": "LOMBARDIA"
+    },
+    {
+      "nome": "BIELLA",
+      "regione": "PIEMONTE"
+    },
+    {
+      "nome": "BOLOGNA",
+      "regione": "EMILIA-ROMAGNA"
+    },
+    {
+      "nome": "BOLZANO/BOZEN",
+      "regione": "TRENTINO-ALTO ADIGE/SÜDTIROL"
+    },
+    {
+      "nome": "BRESCIA",
+      "regione": "LOMBARDIA"
+    },
+    {
+      "nome": "BRINDISI",
+      "regione": "PUGLIA"
+    },
+    {
+      "nome": "CAGLIARI",
+      "regione": "SARDEGNA"
+    },
+    {
+      "nome": "CALTANISSETTA",
+      "regione": "SICILIA"
+    },
+    {
+      "nome": "CAMPOBASSO",
+      "regione": "MOLISE"
+    },
+    {
+      "nome": "CARBONIA-IGLESIAS",
+      "regione": "SARDEGNA"
+    },
+    {
+      "nome": "CASERTA",
+      "regione": "CAMPANIA"
+    },
+    {
+      "nome": "CATANIA",
+      "regione": "SICILIA"
+    },
+    {
+      "nome": "CATANZARO",
+      "regione": "CALABRIA"
+    },
+    {
+      "nome": "CHIETI",
+      "regione": "ABRUZZO"
+    },
+    {
+      "nome": "COMO",
+      "regione": "LOMBARDIA"
+    },
+    {
+      "nome": "COSENZA",
+      "regione": "CALABRIA"
+    },
+    {
+      "nome": "CREMONA",
+      "regione": "LOMBARDIA"
+    },
+    {
+      "nome": "CROTONE",
+      "regione": "CALABRIA"
+    },
+    {
+      "nome": "CUNEO",
+      "regione": "PIEMONTE"
+    },
+    {
+      "nome": "ENNA",
+      "regione": "SICILIA"
+    },
+    {
+      "nome": "FERMO",
+      "regione": "MARCHE"
+    },
+    {
+      "nome": "FERRARA",
+      "regione": "EMILIA-ROMAGNA"
+    },
+    {
+      "nome": "FIRENZE",
+      "regione": "TOSCANA"
+    },
+    {
+      "nome": "FOGGIA",
+      "regione": "PUGLIA"
+    },
+    {
+      "nome": "FORLÌ-CESENA",
+      "regione": "EMILIA-ROMAGNA"
+    },
+    {
+      "nome": "FROSINONE",
+      "regione": "LAZIO"
+    },
+    {
+      "nome": "GENOVA",
+      "regione": "LIGURIA"
+    },
+    {
+      "nome": "GORIZIA",
+      "regione": "FRIULI-VENEZIA GIULIA"
+    },
+    {
+      "nome": "GROSSETO",
+      "regione": "TOSCANA"
+    },
+    {
+      "nome": "IMPERIA",
+      "regione": "LIGURIA"
+    },
+    {
+      "nome": "ISERNIA",
+      "regione": "MOLISE"
+    },
+    {
+      "nome": "L'AQUILA",
+      "regione": "ABRUZZO"
+    },
+    {
+      "nome": "LA SPEZIA",
+      "regione": "LIGURIA"
+    },
+    {
+      "nome": "LATINA",
+      "regione": "LAZIO"
+    },
+    {
+      "nome": "LECCE",
+      "regione": "PUGLIA"
+    },
+    {
+      "nome": "LECCO",
+      "regione": "LOMBARDIA"
+    },
+    {
+      "nome": "LIVORNO",
+      "regione": "TOSCANA"
+    },
+    {
+      "nome": "LODI",
+      "regione": "LOMBARDIA"
+    },
+    {
+      "nome": "LUCCA",
+      "regione": "TOSCANA"
+    },
+    {
+      "nome": "MACERATA",
+      "regione": "MARCHE"
+    },
+    {
+      "nome": "MANTOVA",
+      "regione": "LOMBARDIA"
+    },
+    {
+      "nome": "MASSA-CARRARA",
+      "regione": "TOSCANA"
+    },
+    {
+      "nome": "MATERA",
+      "regione": "BASILICATA"
+    },
+    {
+      "nome": "MEDIO CAMPIDANO",
+      "regione": "SARDEGNA"
+    },
+    {
+      "nome": "MESSINA",
+      "regione": "SICILIA"
+    },
+    {
+      "nome": "MILANO",
+      "regione": "LOMBARDIA"
+    },
+    {
+      "nome": "MODENA",
+      "regione": "EMILIA-ROMAGNA"
+    },
+    {
+      "nome": "MONZA E DELLA BRIANZA",
+      "regione": "LOMBARDIA"
+    },
+    {
+      "nome": "NAPOLI",
+      "regione": "CAMPANIA"
+    },
+    {
+      "nome": "NOVARA",
+      "regione": "PIEMONTE"
+    },
+    {
+      "nome": "NUORO",
+      "regione": "SARDEGNA"
+    },
+    {
+      "nome": "OGLIASTRA",
+      "regione": "SARDEGNA"
+    },
+    {
+      "nome": "OLBIA-TEMPIO",
+      "regione": "SARDEGNA"
+    },
+    {
+      "nome": "ORISTANO",
+      "regione": "SARDEGNA"
+    },
+    {
+      "nome": "PADOVA",
+      "regione": "VENETO"
+    },
+    {
+      "nome": "PALERMO",
+      "regione": "SICILIA"
+    },
+    {
+      "nome": "PARMA",
+      "regione": "EMILIA-ROMAGNA"
+    },
+    {
+      "nome": "PAVIA",
+      "regione": "LOMBARDIA"
+    },
+    {
+      "nome": "PERUGIA",
+      "regione": "UMBRIA"
+    },
+    {
+      "nome": "PESARO E URBINO",
+      "regione": "MARCHE"
+    },
+    {
+      "nome": "PESCARA",
+      "regione": "ABRUZZO"
+    },
+    {
+      "nome": "PIACENZA",
+      "regione": "EMILIA-ROMAGNA"
+    },
+    {
+      "nome": "PISA",
+      "regione": "TOSCANA"
+    },
+    {
+      "nome": "PISTOIA",
+      "regione": "TOSCANA"
+    },
+    {
+      "nome": "PORDENONE",
+      "regione": "FRIULI-VENEZIA GIULIA"
+    },
+    {
+      "nome": "POTENZA",
+      "regione": "BASILICATA"
+    },
+    {
+      "nome": "PRATO",
+      "regione": "TOSCANA"
+    },
+    {
+      "nome": "RAGUSA",
+      "regione": "SICILIA"
+    },
+    {
+      "nome": "RAVENNA",
+      "regione": "EMILIA-ROMAGNA"
+    },
+    {
+      "nome": "REGGIO DI CALABRIA",
+      "regione": "CALABRIA"
+    },
+    {
+      "nome": "REGGIO NELL'EMILIA",
+      "regione": "EMILIA-ROMAGNA"
+    },
+    {
+      "nome": "RIETI",
+      "regione": "LAZIO"
+    },
+    {
+      "nome": "RIMINI",
+      "regione": "EMILIA-ROMAGNA"
+    },
+    {
+      "nome": "ROMA",
+      "regione": "LAZIO"
+    },
+    {
+      "nome": "ROVIGO",
+      "regione": "VENETO"
+    },
+    {
+      "nome": "SALERNO",
+      "regione": "CAMPANIA"
+    },
+    {
+      "nome": "SASSARI",
+      "regione": "SARDEGNA"
+    },
+    {
+      "nome": "SAVONA",
+      "regione": "LIGURIA"
+    },
+    {
+      "nome": "SIENA",
+      "regione": "TOSCANA"
+    },
+    {
+      "nome": "SIRACUSA",
+      "regione": "SICILIA"
+    },
+    {
+      "nome": "SONDRIO",
+      "regione": "LOMBARDIA"
+    },
+    {
+      "nome": "TARANTO",
+      "regione": "PUGLIA"
+    },
+    {
+      "nome": "TERAMO",
+      "regione": "ABRUZZO"
+    },
+    {
+      "nome": "TERNI",
+      "regione": "UMBRIA"
+    },
+    {
+      "nome": "TORINO",
+      "regione": "PIEMONTE"
+    },
+    {
+      "nome": "TRAPANI",
+      "regione": "SICILIA"
+    },
+    {
+      "nome": "TRENTO",
+      "regione": "TRENTINO-ALTO ADIGE/SÜDTIROL"
+    },
+    {
+      "nome": "TREVISO",
+      "regione": "VENETO"
+    },
+    {
+      "nome": "TRIESTE",
+      "regione": "FRIULI-VENEZIA GIULIA"
+    },
+    {
+      "nome": "UDINE",
+      "regione": "FRIULI-VENEZIA GIULIA"
+    },
+    {
+      "nome": "VALLE D'AOSTA/VALLÉE D'AOSTE",
+      "regione": "VALLE D'AOSTA/VALLÉE D'AOSTE"
+    },
+    {
+      "nome": "VARESE",
+      "regione": "LOMBARDIA"
+    },
+    {
+      "nome": "VENEZIA",
+      "regione": "VENETO"
+    },
+    {
+      "nome": "VERBANO-CUSIO-OSSOLA",
+      "regione": "PIEMONTE"
+    },
+    {
+      "nome": "VERCELLI",
+      "regione": "PIEMONTE"
+    },
+    {
+      "nome": "VERONA",
+      "regione": "VENETO"
+    },
+    {
+      "nome": "VIBO VALENTIA",
+      "regione": "CALABRIA"
+    },
+    {
+      "nome": "VICENZA",
+      "regione": "VENETO"
+    },
+    {
+      "nome": "VITERBO",
+      "regione": "LAZIO"
+    }
+  ]
