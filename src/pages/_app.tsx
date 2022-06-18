@@ -1,9 +1,10 @@
-import '../styles/reset.css'
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { Provider } from 'react-redux';
+import ApiErrorsWrapper from '../components/wrappers/ApiErrorsWrapper';
 import { store } from '../state/store/store';
+import '../styles/globals.css';
+import '../styles/reset.css';
 
 function App({ Component, pageProps }: AppProps) {
   return <>
@@ -11,7 +12,9 @@ function App({ Component, pageProps }: AppProps) {
       <title>Next.js Boilerplate</title>
     </Head>
     <Provider store={store}>
-      <Component {...pageProps} />
+      <ApiErrorsWrapper>
+        <Component {...pageProps} />
+      </ApiErrorsWrapper>
     </Provider>
   </>
 }
