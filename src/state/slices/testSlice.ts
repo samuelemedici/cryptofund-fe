@@ -1,11 +1,9 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface TestState {
-  testProp: string | null;
+  testProp?: string;
 }
-const initialState: TestState = {
-  testProp: null,
-};
+const initialState: TestState = {};
 
 export const TestSlice = createSlice({
   name: "test",
@@ -15,7 +13,7 @@ export const TestSlice = createSlice({
       state.testProp = action.payload;
     },
     resetTestProp: (state) => {
-      state.testProp = null;
+      state.testProp = undefined;
     },
   },
 });
