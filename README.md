@@ -43,6 +43,12 @@ Boilerplate for front-end projects based on Next.js.
     <td><a href="https://www.openapis.org/">https://www.openapis.org/</a></td>
     <td><a href="#openapi">Openapi Setup</a></td>
   </tr>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/104760516/174442146-fa7d0468-2393-4da3-b2c7-8f6bbc869deb.png" width="40"></td>
+    <td>Amazon S3</td>
+    <td><a href="https://aws.amazon.com/s3/">https://aws.amazon.com/s3/</a></td>
+    <td><a href="#s3">S3 Setup</a></td>
+  </tr>
 </table>
 
 ## Contacts
@@ -126,24 +132,16 @@ and then import each of them inside
 ├───────────globals.css
 ```
 using the standard CSS syntax
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/104760516/168912580-f5a35d39-c2d7-40cf-a7c6-31ba736206d4.png" width="800">
-</p>
 
-<details>
-  <summary>Copy the code</summary>
-  
-  ```
-  @font-face {
-    font-family: "Test";
-    src: url("/assets/fonts/Test-Regular.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-  }
-  ```
-  
-</details>
- 
+```
+@font-face {
+  font-family: "Test";
+  src: url("/assets/fonts/Test-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+```
+
 ##
 
 <h3 align="center" id="tailwind">
@@ -163,15 +161,8 @@ You can start using TailwindCSS classes in your pages and components without any
 
 If you plan to remove the ```src``` folder in order to place everything inside the root folder, make sure to update your ```tailwind.config.js``` file.
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/104760516/168912300-aa97ee97-a626-4290-860d-9a9c6edc28d6.png" width="800">
-</p>
-
-<details>
-  <summary>Copy the code</summary>
-  
-  ```
-  module.exports = {
+```
+module.exports = {
   /*
   Remove /src from each of the strings inside of the content array
   */
@@ -180,34 +171,23 @@ If you plan to remove the ```src``` folder in order to place everything inside t
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   ...
-  ```
-  
-</details>
+```
 
 If you have to define custom layers, you can do it inside ```globals.css```
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/104760516/168976705-71a79c98-4505-4218-925c-f6951acc8fb2.png" width="800">
-</p>
+```
+@layer components {
 
-<details>
-  <summary>Copy the code</summary>
-  
-  ```
-  @layer components {
-  
-    .test-primary {
-      @apply w-52 h-12 rounded-lg appearance-none text-white;
-    }
-  
-    .test-secondary {
-      @apply w-12 h-12 rounded-md text-black;
-    }
-  
+  .test-primary {
+    @apply w-52 h-12 rounded-lg appearance-none text-white;
   }
-  ```
-  
-</details>
+
+  .test-secondary {
+    @apply w-12 h-12 rounded-md text-black;
+  }
+
+}
+```
 
 ##
 
@@ -234,43 +214,34 @@ Get started by creating a new slice for every state property that you want to im
 
 Each slice have to follow this structure:
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/104760516/168913819-1d0974e5-3356-494b-84f6-90b56306a12a.png" width="800">
-</p>
+```
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-<details>
-  <summary>Copy the code</summary>
-  
-  ```
-  import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+interface TestState {
+  testProp: string | null;
+}
 
-  interface TestState {
-    testProp: string | null;
-  }
-  
-  const initialState: TestState = {
-    testProp: null,
-  };
+const initialState: TestState = {
+  testProp: null,
+};
 
-  export const TestSlice = createSlice({
-    name: "test",
-    initialState,
-    reducers: {
-      setTestProp: (state, action: PayloadAction<string>) => {
-        state.testProp = action.payload;
-     },
-      resetTestProp: (state) => {
-        state.testProp = null;
-     },
-    },
-  });
+export const TestSlice = createSlice({
+  name: "test",
+  initialState,
+  reducers: {
+    setTestProp: (state, action: PayloadAction<string>) => {
+      state.testProp = action.payload;
+   },
+    resetTestProp: (state) => {
+      state.testProp = null;
+   },
+  },
+});
 
-  export const { setTestProp, resetTestProp } = TestSlice.actions;
+export const { setTestProp, resetTestProp } = TestSlice.actions;
 
-  export default TestSlice.reducer;
-  ```
-  
-</details>
+export default TestSlice.reducer;
+```
 
 then import them inside 
 ```
@@ -283,29 +254,20 @@ then import them inside
 
 and add them inside the store configuration:
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/104760516/168906103-d23d8981-6ca5-4a1b-9d8b-65abe4279ab0.png" width="800">
-</p>
-  
-<details>
-  <summary>Copy the code</summary>
-  
-  ```
-  export const store = configureStore({
-  
-    preloadedState: {
-      test: initialState,
-    },
-  
-    reducer: {
-      test: testReducers,
-      validatedInput: validatedInputReducers,
-      newValue: newReducers,
-    },
-  });
-  ```
-  
-</details>
+```
+export const store = configureStore({
+
+  preloadedState: {
+    test: initialState,
+  },
+
+  reducer: {
+    test: testReducers,
+    validatedInput: validatedInputReducers,
+    newValue: newReducers,
+  },
+});
+```
 
 ##
 
@@ -343,3 +305,67 @@ all of the auto-generated code is placed inside
 ```
 and it is ignored by the ```.gitignore``` file.
 
+##
+
+<h3 align="center" id="s3">
+  S3 setup
+</h3>
+
+<p align="center">
+   <img src="https://user-images.githubusercontent.com/104760516/174442146-fa7d0468-2393-4da3-b2c7-8f6bbc869deb.png" width="100">
+</p>
+
+##
+
+You can find two differents apis inside ```src/pages/api/s3```, one for the generation of sharable presigned urls (with expiration time equal to one week) and one for the generation of presigned urls for uploading a file.
+ 
+Both apis are intended to work alongside a private s3 bucket. If you are using a public bucket, you don't need presigned urls.
+
+You can find more informations for the customization of those apis in the official aws-sdk documentation.
+
+Here you can find a simple snippet that displays how to use those apis:
+
+```
+// Assuming you are working with an array of files
+  
+[...incomingFiles].forEach(async (file) => {
+    const filename = encodeURIComponent(file.name);
+  
+  	// HERE YOU FIND THE API CALL
+    const res = await fetch(`/api/s3-upload-url?file=${filename}`);
+  
+    const { url, fields } = await res.json();
+    const formData = new FormData();
+
+    Object.entries({ ...fields, file }).forEach(([key, value]) => {
+        formData.append(key, value as string);
+    });
+
+    const upload = await fetch(url, {
+        method: 'POST',
+        body: formData,
+    });
+
+    if (upload.ok) {
+        console.log('Uploaded successfully!');
+        if (displayDocumentUploadModal) setDisplayDocumentUploadModal(false);
+    } else {
+        console.error('Upload failed.');
+    }
+})
+```
+```
+export default async function getPresignedUrl(
+  filePath: string
+): Promise<string> {
+  const filename = encodeURIComponent(filePath);
+
+  // HERE YOU FIND THE API CALL
+  const res = await fetch(
+    `http://localhost:3000/api/s3-get-url?file=${filename}`
+  );
+
+
+  return res.json();
+}
+```
