@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import localStorage from "localstorage-slim";
-
+import thunk from "redux-thunk";
 import { ErrorReducers } from "../slices/errors";
 import testReducers from "../slices/testSlice";
 
@@ -24,6 +24,7 @@ export const store = configureStore({
     test: testReducers,
     errors: ErrorReducers,
   },
+  middleware: [thunk],
 });
 
 store.subscribe(() => {
