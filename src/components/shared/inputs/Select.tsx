@@ -1,41 +1,85 @@
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 interface SelectProps {
-    placeholder: string;
+    /**Input name */
+    name?: string;
+    /**Input id */
+    id?: string;
+    /**Use this only if you don't want to display the floating label */
+    placeholder?: string;
+    /**Initial value of the input */
+    defaultValue?: string | number;
+    /**Array with the options */
     values: string[] | number[];
-    inputValue(value: string | number): void;
-    preSelectedValue?: string | number;
+    /**Callback for the selected value */
+    selectedValue(value: number | string): void;
+    /**Specifies if the input is required for the form validation */
+    required?: boolean;
+    /**Specifies if the input is disabled */
     disabled?: boolean;
+    /**Use this if you need a floating label on the input */
+    label?: string;
+    /**Specifies the error message for the validation fail - regular font*/
+    errorMessageRegular?: string;
+    /**Specifies the error message for the validation fail - bold font*/
+    errorMessageBold?: string;
+    /**Specifies the success message for the validation success - regular font */
+    successMessageRegular?: string;
+    /**Specifies the success message for the validation success - bold font */
+    successMessageBold?: string;
 }
 
 const Select = (props: SelectProps) => {
 
-    const [value, setValue] = useState<string | number>("")
-
-    useEffect(() => {
-        if (value) props.inputValue(value)
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [value])
-
-    useEffect(() => {
-        if (props.preSelectedValue) setValue(props.preSelectedValue);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
-
     return (
-        <div className="w-full mr-3 relative h-min">
-            {(value && value !== "") && <span className="absolute -top-2 text-xs text-greyscale-grey-mid">{props.placeholder}</span>}
+        <div className="w-full relative">
             <select
-                onChange={(e) => { setValue(e.target.value) }}
-                className={`${value === "" && "text-greyscale-grey-mid"} w-full appearance-none outline-none border-b-divider-light border-b-solid border-b-2 text-lg pt-4 pb-1`}
-                defaultValue={props.preSelectedValue ? props.preSelectedValue : "disabled"}
+                name={props.name}
+                id={props.id}
+                placeholder={props.placeholder || " "}
+                defaultValue={props.defaultValue || props.label}
+                onChange={(event) => props.selectedValue(event.target.value)}
+                required={props.required}
                 disabled={props.disabled}
+                className={`block py-2.5 px-0 
+                w-full text-lg text-text-primary-dark bg-transparent 
+                border-0 border-b-2 border-divider-light
+                appearance-none focus:outline-none focus:ring-0
+                peer ${!props.defaultValue && "text-text-grey-mid"}`}
             >
-                <option value={"disabled"} disabled>{props.placeholder}</option>
+                <option value={props.label} disabled>{props.label}</option>
                 {props.values.map((optionValue) => <option key={optionValue} value={optionValue}>{optionValue}</option>)}
             </select>
-            <div className="absolute right-0 bottom-1 pointer-events-none">
+            {!!props.id &&
+                !!props.label &&
+                props.defaultValue && !props.placeholder &&
+                <label
+                    htmlFor={props.id}
+                    className="peer-focus:font-medium absolute text-base text-text-grey-mid
+                duration-300 transform -translate-y-6 scale-75
+                top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 
+                peer-placeholder-shown:translate-y-0 peer-focus:scale-75
+                peer-focus:-translate-y-6">
+                    {props.label}
+                </label>
+            }
+            {
+                (props.successMessageRegular || props.successMessageBold) && <p
+                    id="filled_success_help"
+                    className="text-xs text-state-green absolute">
+                    <span className="font-medium">{props.successMessageBold}</span>
+                    {props.successMessageRegular}
+                </p>
+            }
+            {
+                (props.errorMessageRegular || props.errorMessageBold) && <p
+                    id="filled_success_help"
+                    className="text-xs text-state-red absolute">
+                    <span className="font-medium">{props.errorMessageBold}</span>
+                    {props.errorMessageRegular}
+                </p>
+            }
+            <div className="absolute right-0 bottom-2 pointer-events-none">
                 <div className="relative h-6 w-6">
                     <Image
                         src="/assets/images/shared/arrows/down-black.svg"
