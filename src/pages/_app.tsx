@@ -9,7 +9,7 @@ import '../styles/reset.css';
 function App({ Component, pageProps }: AppProps) {
   return <>
     <Head>
-      <title>Next.js Boilerplate</title>
+      <title>CRYPTOFUND</title>
     </Head>
     <Provider store={store}>
       <ApiErrorsWrapper>
