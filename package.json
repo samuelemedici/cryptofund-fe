@@ -3,19 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npm run generate-api && next dev",
-    "build": "npm run generate-api && next build",
-    "start": "npm run generate-api && next start",
-    "lint": "npm run generate-api && next lint",
-    "generate-api": "openapi -i src/api/openapi.yml -o src/api/generated"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.4",
     "axios": "^0.27.2",
     "localstorage-slim": "^2.3.0",
     "next": "^12.2.5",
-    "openapi-typescript": "^5.4.1",
-    "openapi-typescript-codegen": "^0.23.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.2",
