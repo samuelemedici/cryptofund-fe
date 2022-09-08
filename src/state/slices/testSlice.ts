@@ -1,7 +1,6 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { AxiosError } from "axios";
 import baseUrl from "../../utils/api";
-import { addApiError } from "./errors/apiErrorSlice";
 
 interface TestState {
   testProp?: string;
@@ -17,11 +16,7 @@ export const testThunk = createAsyncThunk<void>(
         // dispatch some actions
       })
       .catch((error: AxiosError) => {
-        dispatch(
-          addApiError({
-            description: error.message,
-          })
-        );
+
       });
   }
 );

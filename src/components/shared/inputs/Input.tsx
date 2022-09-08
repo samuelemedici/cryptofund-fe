@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
-import { InputType } from "../../../utils/models/InputType";
+import { InputType } from "../../../models/InputType";
 interface InputProps {
     /**Accepted values: text, number, email, password */
     type: InputType;
