@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './linear-gradient.css';
 
 @font-face {
   font-family: "BeVietnamPro";
@@ -52,7 +53,7 @@
   }
 
   .button-primary {
-    @apply bg-primary-button-color text-white
+    @apply button bg-primary-button-color text-white
   }
 
   .radio-primary {

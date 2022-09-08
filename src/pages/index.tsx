@@ -1,12 +1,12 @@
-import type { NextPage } from 'next';
+import type { NextPage } from "next";
+import Header from "../components/shared/Header";
 
 const Home: NextPage = () => {
   return (
     <div className="h-screen w-screen">
-      <h1>CryptoFunD</h1>
-      <button type="button" className="button button-primary">Prova</button>
+      <Header />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
